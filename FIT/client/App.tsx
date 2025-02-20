@@ -2,9 +2,9 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Home from "./app/screens/Home";
-import ChatScreen from "./app/screens/ChatScreen";
-import PersonalInfo from "./app/screens/PersonalInfo";
+import Home from "./screens/Home";
+import ChatScreen from "./screens/ChatScreen";
+import PersonalInfo from "./screens/PersonalInfo";
 
 const Stack = createNativeStackNavigator();
 

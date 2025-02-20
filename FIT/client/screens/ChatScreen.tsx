@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ScrollView } from "react-native";
-import ChatNav from "../../components/ChatNav";
+import ChatNav from "../components/ChatNav";
 
-const avatar = require("../../assets/rengoku.jpeg");
+const avatar = require("../assets/rengoku.jpeg");
 const ChatScreen = ({ navigation }) => {
   return (
     <SafeAreaProvider>

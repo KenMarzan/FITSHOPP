@@ -17,15 +17,15 @@ import { CameraView, CameraType, useCameraPermissions } from "expo-camera";
 import * as ImagePicker from "expo-image-picker";
 import { useFonts, Roboto_100Thin } from "@expo-google-fonts/roboto";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Navbar from "../../components/Navbar";
-import CameraBox from "../../components/CameraBox";
-import CameraControls from "../../components/CameraControls";
-import History from "../../components/History";
-import HistoryScroll from "../../components/HistoryScroll";
-import SendMessages from "../../components/SendMessages";
-import ChatBox from "../../components/ChatBox";
-import Modals from "../../components/Modals";
-import Emojis from "../../components/Emojis";
+import Navbar from "../components/Navbar";
+import CameraBox from "../components/CameraBox";
+import CameraControls from "../components/CameraControls";
+import History from "../components/History";
+import HistoryScroll from "../components/HistoryScroll";
+import SendMessages from "../components/SendMessages";
+import ChatBox from "../components/ChatBox";
+import Modals from "../components/Modals";
+import Emojis from "../components/Emojis";
 
 import { PanResponder } from "react-native";
 
@@ -35,10 +35,10 @@ const Home = ({ navigation }) => {
   });
 
   // Nav bar
-  const navbarIcon = require("../../assets/rengoku.jpeg");
+  const navbarIcon = require("../assets/rengoku.jpeg");
 
   // images
-  const [imageUri, setImageUri] = useState<string | null>(null);
+
   const [imageHistory, setImageHistory] = useState<string[]>([]);
   const [historyVisible, setHistoryVisible] = useState<boolean>(false);
 
@@ -206,7 +206,7 @@ const Home = ({ navigation }) => {
               navbarIcon={navbarIcon}
             />
 
-            <View>
+            <View style={styles.textControls}>
               <ChatBox animateEmoji={animateEmoji} />
               <SendMessages openCamera={openCamera} />
             </View>
@@ -241,9 +241,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   image: {
-    marginTop: 60,
-    width: 410,
+    // width: 410,
+    // height: 410,
+
+    // position: "relative",
+    // transform: [{ translateX: 100 }],
+
+    width: "auto",
     height: 410,
+    margin: "auto",
+    marginTop: 60,
     borderRadius: 60,
     borderWidth: 1,
   },
@@ -277,6 +284,10 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 15,
+  },
+  textControls: {
+    width: 410,
+    margin: "auto",
   },
 });
 

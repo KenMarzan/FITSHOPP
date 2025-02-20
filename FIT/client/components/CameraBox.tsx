@@ -42,6 +42,8 @@ const styles = StyleSheet.create({
     width: 400,
     height: 400,
     backgroundColor: "black",
+    borderWidth: 1,
+    borderColor: "white",
   },
   camera: {
     width: 410,
