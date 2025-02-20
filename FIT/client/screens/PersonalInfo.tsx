@@ -86,7 +86,15 @@ function PersonalInfo() {
             placeholder="Last name"
           />
 
-          <TouchableOpacity style={style.buttonBorder} onPress={submitName}>
+          <TouchableOpacity
+            style={[
+              style.buttonBorder,
+              { backgroundColor: firstName && lastName ? "orange" : "gray" },
+              { borderColor: firstName && lastName ? "orange" : "gray" },
+            ]}
+            onPress={submitName}
+            disabled={!firstName || !lastName}
+          >
             <Text style={style.textColorButton}>Continue →</Text>
           </TouchableOpacity>
         </View>
